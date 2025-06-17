@@ -55,10 +55,10 @@ _"Why Web? Because everything we create—whether in DSA or AI—reaches users t
 
 📌 mobile responsive version
 
-![Screenshot 5](./screenshots/screenshot5.png)  
-![Screenshot 6](./screenshots/screenshot6.png)  
-![Screenshot 7](./screenshots/screenshot7.png)  
-![Screenshot 8](./screenshots/screenshot8.png)
+![Screenshot 5](./screenshots/screenshot5.jpeg)  
+![Screenshot 6](./screenshots/screenshot6.jpeg)  
+![Screenshot 7](./screenshots/screenshot7jpeg)  
+![Screenshot 8](./screenshots/screenshot8.jpeg)
 
 ---
 
