@@ -1,0 +1,1528 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy',sans-serif;
+}
+html,body {
+    height: 100%;
+    width: 100%;
+
+}
+
+#main{
+    height: 100%;
+    width: 100%;
+    background-color: #F8F8F8;
+    position: relative;
+    padding-top: 0.01px; 
+    overflow-x: hidden;
+    /* create some gap between main and nav else margin top property does not work properly this is a css bug */
+}
+
+#nav{
+    height: 11vh;
+    width: 100%;
+    /* background-color: red; */
+    margin-top: 40px;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nav h1{
+    /* background-color: aqua; */
+    height: 100%;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'monument extra bold',sans-serif;
+    font-weight: 800;
+    font-size: 45px;
+    letter-spacing: -4px;
+    position: relative;
+}
+
+#nav h1::after{
+    position: absolute;
+    content: "©";
+    font-size: 1.2vw;
+    font-family: "gilroy";
+    font-weight: 200;
+    top: 20%;
+    right: 19%;
+}
+
+#nav h1::before{
+    position: absolute;
+    content: "model management";
+    font-size: 0.8vw;
+    font-family: "gilroy",sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.04vw;
+    bottom: 10%;
+    right: 23%;
+}
+
+#nav h2{
+    /* background-color: rgb(166, 82, 96); */
+    height: 100%;
+    width: 22%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 2px solid #000;
+    font-size: 23px;
+    font-weight: 500;
+}
+
+#nav h2:nth-last-child(2){
+    width: 10%;
+}
+
+
+#nav h3{
+    display: none;
+}
+
+/* ****************************** */
+#center{
+    height: 90%;
+    width: 100%;
+    /* background-color: red; */
+    padding: 4vw;
+    position: relative;
+}
+
+#content {
+    height: 100%;
+    width: 100%;
+    /* background-color: blue; */
+    position: relative;
+}
+
+#content video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#overlay{
+    height: 52%;
+    width: 100%;
+    position: absolute;
+    /* background-color: red; */
+    bottom: 0;
+    padding: 3vw;
+    /* mix-blend-mode: difference; */
+    background-color: #68676733;
+    backdrop-filter: blur(1px);;
+}
+
+#over1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    margin-bottom: 2vh;
+}
+
+#over1 h1{
+    font-family: 'monument ultrabold',sans-serif;
+    font-size: 3.4vw;
+    
+    /* font-weight: 100; */
+}
+
+#over1 h2{
+    font-size: 1vw;
+    padding: 2vw 2.1vw;
+    border-radius: 50%;
+    /* background-color: blue; */
+    border: 1px solid #fff;
+    /* border-bottom: 2px solid #fff; */ 
+}
+
+#over2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    border-top: 1.5px solid #fff;
+    padding: 1.5vw 0;
+}
+
+#over2 h2{
+    font-size: 1.3vw;
+    font-weight: 500;
+}
+
+#over2 img{
+    height: 3vw;
+}
+
+/* **************************************************** */
+#scroll{
+    height: 40vh;
+    width: 100%;
+    /* background: red; */
+    /* padding: 1vw; */
+    /* display: flex;  ***** not using that here because display flex ,put element in the space forcefully no scrollbar is shown below for moving left write */
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    overflow: hidden;
+}
+
+
+#container{
+    height: 100%;
+    width: 200%;
+    /* background-color: #000; */
+    display: inline-block;
+    padding: 2vw ;
+    animation-name: horizScroll;
+    animation-duration: 10s;
+    /* animation-delay: -10s; */
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+;
+}
+
+#scroll img{
+    /* display: none; */
+    border-radius: 50%;
+    height: 100%;
+    width: 7.5%;
+    margin: 0 1vw;
+    object-fit: cover;
+    object-position: 30% 30%;
+    margin-right: 25px;
+}
+
+@keyframes horizScroll {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-50%);
+    }
+}
+
+/* ***************************************************** */
+#alphabet{
+    height: 10vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7vw;
+    border-top: .1vw solid #000;
+    border-bottom: .1vh solid #000;
+}
+
+#alphabet h5{
+    font-size: 1.7vw;
+    /* text-transform: uppercase; */
+    font-weight: 500;
+    font-style: italic;
+    border-bottom: 2px solid #000;
+    letter-spacing: 0.5vw;
+    margin-right: 2vw;
+}
+
+#alphabet h6{
+    font-size: 1vw;
+    /* text-transform: uppercase; */
+    font-weight: 400;
+    font-style: italic;
+    padding: 0.6vw .8vw;
+    border-radius: 50%;
+    border: 2px solid #00000000;
+    transition: all ease 2s;
+    cursor: pointer;
+    /* background-color: blue; */
+}
+
+#alphabet :hover{
+    border: 2px solid #000000b3;
+}
+
+/* ************************************************** */
+#page2{
+    height: 100%;
+    width: 100%;
+    background-color: #F8F8F8;
+    display: flex;
+    align-items : center;
+    justify-content: space-between;
+    padding: 2vw 5vw;
+    gap:3vw;
+    /* background-color: blue; */
+}
+
+#page2part1 {
+    height: 100%;
+    width: 60%;
+    /* background-color: red; */
+    /* background-image: url(https://images.unsplash.com/photo-1606047501623-c254efe43bb5?q=80&w=1956&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=https://images.unsplash.com/photo-1606047501623-c254efe43bb5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8NXwzODAyOTA2M3x8ZW58MHx8fHx8%3D%3D); */
+}
+
+#page2part1 img{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+    object-position: 50%;
+}
+
+
+#page2part2  {
+    height: 100%;
+    width: 40%;
+    /* background-image: url(https://https://images.unsplash.com/photo-1606047501623-c254efe43bb5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8NXwzODAyOTA2M3x8ZW58MHx8fHx8.unsplash.com/photo-1606047501623-c254efe43bb5?q=80&w=1956&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); */
+    /* background-color: #000; */
+    display: flex;
+    position: relative;
+}
+
+#page2part2 img{
+    /* display: none; */
+    height:75%;
+    width:100%;
+    object-fit: cover ;
+    object-position: 30% 0%;
+    position: absolute;
+}
+
+#page2part2text1{
+    height: 22%;
+    width: 30%;
+    bottom: 0;
+    position: absolute;
+    /* background-color: aqua; */
+    font-weight: 600;
+    font-size: large;
+    ;
+}
+
+#page2part2text2{
+    height: 22%;
+    width: 60%;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    font-size: small ;
+    text-align:justify
+    /* background-color: yellow; */
+}
+
+/* ******************************************************* */
+
+#page3{
+    height: 100%;
+    width: 100%;
+    /* background-color: #fc4040; */
+    background-color: #F8F8F8;
+    display: flex;
+    /* align-items: center; */
+    position: relative;
+    padding: 2vw 5.3vw ;
+}
+
+#page3head{
+    /* background-color: #c02f2f; */
+    height: 8%;
+    width: 100%;
+    position: absolute;
+    /* background-color: #fff; */
+}
+
+#page3head h2{
+    font-size: 2.3vw;
+    font-family: monument,sans-serif;
+    letter-spacing: 0.01vw;
+    font-weight: 900;
+}
+
+#page3right{
+    height: 80%;
+    width: 50%;
+    /* background-color:#afde08; */
+    top: 15%;  
+    right: 6%;
+    position: absolute;
+}
+
+#page3right img{
+    height: 100%;
+    width: 100%;
+    object-position: 30% 20%;
+    object-fit: cover;
+}
+
+#page3left{
+    /* background-color: #159d92; */
+    height: 40%;
+    width: 20%;
+    top: 30%;
+    left: 10%;
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+@keyframes rotation {
+    100%{transform: rotate(360deg);}
+}
+
+#leftRotate img{
+    height: 100%;
+    width: 46vw;
+    animation-name: rotation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+
+#leftRotate{
+    /* height: 100%;
+    width: 100%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    /* background-color: #000; */
+
+}
+
+#leftArrow img{
+    /* background-color: #fff; */
+    height: 10vw;
+    width: 7vw;
+    position: absolute;
+    z-index: 1;
+    left: 42%;
+    top:39%;
+    animation: none;
+}
+
+#page3bottomText{
+    position: absolute;
+    /* background-color: red; */
+    width: 35%;
+    top: 85%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* ****************************************************** */
+#imgAfterPage3{
+    /* background-color:red; */
+    background-color: #F8F8F8;
+    width: 100%;
+    height: 85%;
+    padding: 0vw 5.5vw;
+}
+
+#imgAfterPage3 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ****************************************************** */
+#page4{
+    height: 100%;
+    width: 100%;
+    /* background-color: #0fc448; */
+    position: relative;
+    padding: 5vw 4vw;
+    background-color: #F8F8F8;
+}
+
+#page4>h1{
+    text-align: center;
+    font-family: 'monument',sans-serif;;
+    text-transform: uppercase;
+    font-size: 3vw;
+    font-weight: 800;
+    margin-bottom: 5vh;
+}
+
+.elem{
+    height: 15vh;
+    width: 100%;
+    /* background-color: red; */
+    border-top: solid 2px #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2vw;
+    position: relative;
+    transition: all ease 0.3s;
+}
+
+.elem:hover{
+    background-color: rgb(224, 222, 222);
+}
+
+.elem:nth-last-child(1){
+    border-bottom: 2px solid #000;
+
+}
+
+.elem h4{
+    font-size: 1.1vw;
+    text-transform: uppercase;
+    font-weight: 500;
+    width: 6%;
+    /* background-color: red; */
+}
+
+.elem img{
+    height: 13vh;
+    width: 7vw;
+    border-radius: 50%;
+    left: 10%;
+    opacity: 0; 
+    transition: all ease 1s;
+    position: absolute;
+    object-fit: cover;
+
+}
+
+.elem:nth-child(0) img{
+    /* background-color: #000; */
+    object-fit: contain;
+}
+
+.elem:nth-child(2n+1) img{
+    left: 50%;
+}
+
+.elem:hover img{
+    opacity: 1;
+    left: 30%;
+    scale:1.1;
+    
+}
+
+
+.elem .elemInner{
+    /* background-color: red; */
+    width: 45%;
+}
+
+.elemInner h1{
+    font-size: 2.5vw;
+    font-weight: 500;
+}
+
+.elemInner h5{
+    font-size: .9vw;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+/* ****************************************** */
+#page5{
+    height: 100%;
+    width: 100%;
+    background-color: #F8F8F8;
+    display: flex;
+    align-items : center;
+    justify-content: space-between;
+    padding: 2vw 5vw;
+    gap:3vw;
+    /* background-color: blue; */
+}
+
+#page5part1 {
+    height: 100%;
+    width: 50%;
+    /* background-color: red; */
+}
+
+#page5part1 img{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+    object-position: 80% 30%;
+}
+
+
+#page5part2  {
+    height: 100%;
+    width: 50%;
+    /* background-color: #000; */
+    display: flex;
+    position: relative;
+}
+
+#page5part2text{
+    height: 45%;
+    width: 100%;
+    padding: 1vw;
+    /* background-color: #11bd44; */
+    display: flex;
+    position: relative;
+}
+
+#upperText  {
+    position: absolute;
+    height: 16%;
+    width: 90%; 
+    /* background: #ab1313; */
+
+}
+
+#upperText h1{
+    font-family: "monument",sans-serif;
+    font-weight:  900;
+    font-size: 2.3vw;
+    text-transform: uppercase;
+}
+
+#middleText {
+    position: absolute;
+    height: 34%;
+    width: 70%;
+    top: 30%;
+    /* background: #0513d7; */
+}
+
+#middleText h3{
+    font-weight: 300;
+    font-family: "monument",sans-serif;
+    font-size: 1.2vw;
+}
+
+#lowerText {
+    position: absolute;
+    height: 40%;
+    width: 85%;
+    top: 65%;
+    /* background: #000; */
+}
+
+#lowerText h5{
+    font-size: 0.85vw;
+    font-weight: 100;
+    font-family: "monument",sans-serif;
+}
+
+#page5part2img{
+    height: 55%;
+    width: 100%;
+    /* background-color: #d00c0c; */
+    bottom: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* gap: 14%; */
+    position: absolute;
+    padding: 2%;
+}
+
+#page5part2img img{
+    height: 100%;
+    width: 45%;
+    /* display: none;  */
+    /*  background-color: #0c812d; */
+}
+
+
+/* ****************************************** */
+#imgAfterPage5{
+    /* background-color:red; */
+    background: #F8F8F8;
+    width: 100%;
+    height: 95%;
+    padding: 1vw 5vw;
+}
+
+#imgAfterPage5 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 30% 20%;
+}
+
+
+
+
+/* ****************************************** */
+#page6{
+    height: 100%;
+    width: 100%;
+    background-color: #F8F8F8;
+    display: flex;
+    align-items : center;
+    justify-content: space-between;
+    padding: 2vw 5vw;
+    gap:3vw;
+    /* background-color: blue; */
+}
+
+#page6part1 {
+    height: 100%;
+    width: 60%;
+    /* background-color: red; */
+}
+
+#page6part1 img{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+   object-position: 30% 20%;
+}
+
+
+#page6part2  {
+    height: 100%;
+    width: 40%;
+    /* background-image: url(https://https://images.unsplash.com/photo-1606047501623-c254efe43bb5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8NXwzODAyOTA2M3x8ZW58MHx8fHx8.unsplash.com/photo-1606047501623-c254efe43bb5?q=80&w=1956&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); */
+    /* background-color: #000; */
+    display: flex;
+    position: relative;
+}
+
+#page6part2 img{
+    /* display: none; */
+    height:75%;
+    width:100%;
+    object-fit: cover ;
+    /* object-position:0%; */
+    position: absolute;
+}
+
+#page6part2text1{
+    height: 22%;
+    width: 30%;
+    bottom: 0;
+    position: absolute;
+    /* background-color: aqua; */
+    font-weight: 600;
+    font-size: large;
+    ;
+}
+
+#page6part2text2{
+    height: 22%;
+    width: 60%;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    font-size: small ;
+    text-align:justify
+    /* background-color: yellow; */
+}
+
+/* ****************************************** */
+
+#marque{
+    /* height: 20vh; */
+    width: 100%;
+    padding: 0.6vw;
+    background-color: #F8F8F8;
+    white-space: nowrap; /* every h1 comez in one line*/
+    /* overflow-x: auto; */
+    /* overflow-y: hidden; */
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+
+}
+
+#marque h1{
+    /* background-color: blue; */
+    text-transform: uppercase;
+    display: inline-block;
+    font-size: 4vw;
+    font-weight: 900;
+    /* learning  about webkit ,and 4px is default gap between h1*/
+    -webkit-text-stroke: 2px black ;
+    color: transparent;
+    font-family: "monument",sans-serif;
+    margin-right: 16px; /*total gap 20 px*/
+    letter-spacing: 0.2vw ;
+    animation-name: movingText;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes movingText{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(calc(-100% - 20px));/* remove the jerk in animation*/
+    }
+} 
+/* *********************************** */
+#footer{
+    height: 100%;
+    width: 100%;
+    background-color: #F8F8F8;
+    /* background-color:#e03131; */
+    padding: 2vw 0vw;
+    display: flex;
+    position: relative;
+}
+
+#upperHalf{
+    /* background-color: aqua; */
+    height: 65%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    /* gap:5%; */
+    margin-left: 5vw;
+}
+
+#textDiv{
+    /* background-color: wheat; */
+    height: 100%;
+    /* margin: 1vw; */
+    width: 10%;
+}
+
+#textDiv h1{
+    font-size: 2.3vw;
+    font-family: "monument extra bold",sans-serif;
+    font-weight: 800;
+}
+
+.cardDiv{
+    height: 100%;
+    width: 40%;
+    margin-left: 7%;
+    /* border: #000 solid 2px; */
+    padding: 1vw ;
+    position: relative;
+}
+
+.cardText h3{
+    font-size: 1.4vw;
+    font-weight: 400;
+    line-height: 140%;
+    /* background-color: red; */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.cardText h3::before{
+    position: absolute;
+    content: "🅱";
+    font-size: 1.4vw;
+    font-family: "gillroy";
+    font-weight: 100;
+    top:0;
+    left:0;
+}
+
+.cardImg{
+    /* background-color: #a4e50b; */
+    position: absolute;
+    height: 60%;
+    width: 90% ;
+    top: 30%;
+    
+}
+
+.cardImg img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    
+}
+
+img:hover{
+    scale: 1.05;
+    transition: all ease-in-out 0.5s;
+}
+
+#lowerHalf{
+    /* background-color: red; */
+    height: 14vw;
+    width: 100%;
+    position: absolute;
+    bottom: 2vw;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+}
+
+#lowerHalf h1{
+    /* background-color: aqua;  */
+    height: 100%;
+    width: 20%;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    font-family: 'monument extra bold',sans-serif;
+    font-weight: 800;
+    font-size: 45px;
+    letter-spacing: -4px;
+    position: relative;
+}
+
+#lowerHalf h1::after{
+    position: absolute;
+    content: "©";
+    font-size: 1.2vw;
+    font-family: "gilroy";
+    font-weight: 200;
+    top: 5%;
+    right: 19%;
+}
+
+#lowerHalf h1::before{
+    position: absolute;
+    content: "model management";
+    font-size: 0.8vw;
+    font-family: "gilroy",sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.04vw;
+    top: 22.8%; 
+    right: 23%;
+}
+
+#lowerHalf h2{
+    /* background-color: rgb(160, 166, 82);  */
+    height: 100%;
+    width: 20%;
+    padding: 1.2vw 0vw;
+    /* top: 10%; */
+    display: flex; 
+    justify-content: center;
+    border-right: 2px solid #000;
+    font-size: 1.8vw;
+    font-weight: 500;
+    /* position: relative; */
+}
+
+#lowerHalf h2:nth-last-child(2){
+    height:35%;
+    width: 40%;
+    border-bottom: 2px solid #000;
+}
+
+#lowerHalf h2:nth-last-child(1){
+    position: absolute;
+    /* background-color: #c61c1c; */
+    right: 0%;
+    top:35%;
+    height: 65%;
+    width:40%;
+    display: inline-block;
+    padding-left: 2vw;
+}
+
+#contact{
+    /* background:blue; */
+    height: 83%;
+    width: 100%;
+}
+
+#contact i{
+    opacity:70%;
+    scale: 0.9;
+    color: #000;
+}
+
+#contact i:hover{
+    scale:1.1;
+    opacity: 100%;
+}
+
+#contact h6{
+    font-size: 0.7vw;
+    font-weight: 300;
+}
+
+/* ******************************************** */
+/* responsive design */
+
+
+@media(max-width:600px) {
+        
+#nav{
+    height: 8vh;
+    margin-top: 20px;
+    border-top: 0.8px solid #000;
+    border-bottom: 0.8px solid #000;
+    padding: 0 5vw;
+}
+
+#nav h1{
+    width: 20%;
+    justify-content: flex-start;
+    font-size: 4.5vh;
+}
+
+#nav h3{
+    display: block;
+}
+
+#nav h1::after{
+   display: none;
+}
+
+#nav h1::before{
+    display: none;
+}
+
+#nav h2{
+    display: none;
+}
+
+/* ****************** */
+
+#center{
+    height: 50%;
+}
+
+#content {
+    height: 100%;
+    width: 100%;
+    /* background-color: blue; */
+    position: relative;
+}
+
+#content video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#overlay{
+    height: fit-content;
+}
+
+#over1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2vw;
+}
+
+#over1 h1{
+    font-size: 5.4vw;
+    font-weight: 200;
+}
+
+#over1 h2{
+    font-size: 2vw;
+    padding: 3vw 3.4vw;
+    border-radius: 50%;
+    /* background-color: blue; */
+    border: 1px solid #fff;
+    /* border-bottom: 2px solid #fff; */ 
+}
+
+
+#over2{
+    border-top: 1px solid #fff;
+}
+
+#over2 h4{
+    font-size: 3vw;
+    font-weight:100;
+}
+
+#over2 img{
+    height: 3vw;
+
+}
+
+/* ****************************************************** */
+#scroll{
+    height: 15vh;
+    width: 250%;
+    /* background: red; */
+    /* display: flex;  ***** not using that here because display flex ,put element in the space forcefully no scrollbar is shown below for moving left write */
+}
+
+#container{
+    width: 200%;
+    animation-name: horizScroll;
+    animation-duration: 6s;
+}
+
+#scroll img{
+    /* display: none; */
+    border-radius: 50%;
+    height: 95%;
+    width: 5.5%;
+}
+
+@keyframes horizScroll {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-50%);
+    }
+}
+
+/* *********************************************** */
+
+#alphabet{
+    height: 8vw;
+    width: 100%;
+    gap: -4vh;
+    border-top: .1vw solid #000;
+    border-bottom: .1vw solid #000;
+}
+
+#alphabet h5{
+    display: none;
+}
+
+#alphabet h6{
+    font-size: 2.25vw;
+    padding: 0.5vw .8vw;
+    border-radius: 50%;
+    border: 0.01vw solid #00000001;
+    /* background-color: blue; */
+}
+
+#alphabet :hover{
+    border: 0.4vw  solid #0000004c;
+}
+
+
+/* *********************************************** */
+
+#page2{
+    height: 60%;
+    padding-bottom: 0;
+}
+
+#page2part1 {
+    display: none;
+}
+
+
+#page2part2  {
+    height:100%;
+    width: 100%;
+}
+
+#page2part2text1{
+    font-size: 3vw;
+}
+
+#page2part2text2{
+    font-size: 2.5vw;
+}
+
+/* *********************************************** */
+#page3{
+    height: 50%;
+    background-color: #F8F8F8;
+    position: relative;
+    padding: 2vw 5.3vw ;
+}
+
+#page3head{
+    height: 5%;
+}
+
+#page3head h2{
+    font-size: 4vw;
+    letter-spacing: 0.2vw;
+}
+
+#page3right{
+    height: 90%;
+    top: 5vw;  
+    /* right: 6%; */
+}
+
+#page3left{
+    top: 20%;
+    left: 12%;  
+}
+
+
+#leftRotate img{
+    width: 70vw;
+}
+
+#leftArrow img{
+    height: 10vw;
+    width: 7vw;
+    left: 45%;
+    top: 42%;
+    animation: none;
+}
+
+#page3bottomText{
+    top: 75vw;
+    font-size: 2vw;
+}
+
+/* ****************************************************** */
+#imgAfterPage3{
+    height: 30%;
+}
+
+/* ****************************************************** */
+#page4{
+    height: 60%;
+}
+
+#page4>h1{
+    font-size: 6vw;
+    margin-bottom: 3.5vh;
+}
+
+.elem{
+    height: 20%;
+    border-top: solid 0.13vh #000;
+    padding: 1vw;
+    transition: all ease 0.3s;
+}
+
+.elem:nth-last-child(1){
+    border-bottom: solid 0.13vh #000;
+
+}
+
+.elem h4{
+    font-size: 1.8vh;
+}
+
+.elem img{
+    height: 10vh;
+    width: 20vw;
+    left: 5%;
+}
+.elem:hover img{
+    opacity: 1;
+    left: 25%;
+    scale:1.5; 
+}
+
+.elem .elemInner{
+    width: 45%;
+}
+
+.elemInner h1{
+    font-size: 2vh;
+}
+
+.elemInner h5{
+    font-size: 2.3vw;
+}
+
+
+/* ****************************************************** */
+#page5{
+    height: 60%;
+}
+
+#page5part1 img{
+    object-position: 50% 30%;
+}
+
+
+#page5part2  {
+    height: 100%;
+    width: 50%;
+    /* background-color: #000; */
+    display: flex;
+    position: relative;
+}
+
+#page5part2text{
+    height: 45%;
+    width: 100%;
+    padding: 1vw;
+ 
+}
+
+#upperText h1{
+    font-weight:  800;
+    font-size: 2.3vh;
+}
+
+#middleText {
+    width:90%;
+    top: 20%;
+}
+
+#middleText h3{
+    font-size: 1.2vh;
+}
+
+#lowerText {
+    height: 40%;
+    width: 95%;
+    top: 65%;
+    /* background: #000; */
+}
+
+#lowerText h5{
+    font-size: 0.9vh;
+    font-weight: 200;
+}
+
+#page5part2img{
+    height: 55%;
+    width: 100%;
+    /* background-color: #d00c0c; */
+    bottom: 0%;
+    /* padding-right: 5vh; */
+}
+
+#page5part2img img:nth-child(1){
+    height: 100%;
+    width: 110%;
+    opacity:1;
+    transition: all ease-out 0.3s;
+    z-index: 1;
+}
+
+#page5part2img img:nth-child(1):hover{
+    opacity: 0;
+}
+
+#page5part2img img:nth-child(2){
+    height: 100%;
+    width: 100%;
+    opacity:0;
+    transition: all ease-in 0.3s;
+    position: absolute;
+    z-index: 2;
+}
+
+#page5part2img img:nth-child(2):hover{
+    opacity: 1;
+}
+
+/* ****************************************** */
+#imgAfterPage5{
+    height: 30%;
+}
+
+/* ****************************************************** */
+
+#page6{
+    height: 60%;
+}
+
+#page6part1 {
+    display:none;
+    /* background-color: red; */
+}
+
+
+#page6part2  {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+#page6part2 img{
+    /* display: none; */
+    height:75%;
+    width:100%;
+    object-fit: cover ;
+    /* object-position:0%; */
+    position: absolute;
+}
+
+#page6part2text1{
+    height: 22%;
+    width: 30%;
+    bottom: 0;
+    position: absolute;
+    /* background-color: aqua; */
+    font-weight: 600;
+    font-size: large;
+    ;
+}
+
+#page6part2text2{
+    height: 22%;
+    width: 60%;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    font-size: small ;
+    text-align:justify
+    /* background-color: yellow; */
+}
+
+/* ****************************************** */
+
+#marque{
+    /* height: 5vh; */
+    width: 100%;
+    border-top: 0.15vh solid #000;
+    border-bottom: 0.15vh solid #000;
+
+}
+
+#marque h1{
+    font-size: 4vh;
+    font-weight: 700;
+    /* learning  about webkit ,and 4px is default gap between h1*/
+    -webkit-text-stroke: 0.15vh black ;
+    color: black;
+    margin-right: 12px; /*total gap 20 px*/
+}
+
+/* *********************************** */
+#footer{
+    height: 40%;
+}
+
+#upperHalf{
+    height: 70%;
+}
+
+
+#textDiv h1{
+    font-size: 2.3vh;
+    font-weight: 700;
+}
+
+.cardDiv{
+    height: 90%;
+    width: 38%;
+    margin-left: 5%;
+    border-radius: 0.3vh;
+    padding: 1vh;
+    transition: all ease 0.2s;
+}
+
+.cardDiv:hover{
+    border: #00000014 solid 0.15vh;
+    scale: 1.05;
+    background-color: #71717109;
+}
+
+.cardText h3{
+    font-size: 0.9vh;
+    font-weight: 400;
+    line-height: 100%;
+}
+
+.cardText h3::before{
+    position: absolute;
+    content: "🅱";
+    font-size: 1.4vw;
+    font-family: "gillroy";
+    font-weight: 100;
+    top:2%;
+    left:2%;
+}
+
+.cardImg{
+    /* background-color: #a4e50b; */
+    position: absolute;
+    height: 60%;
+    width: 90% ;
+    top: 30%;
+}
+
+/******************************************************/
+#lowerHalf{
+    /* background-color: red; */
+    height: 10vh;
+    width: 100%;
+    position: absolute;
+    bottom: 2vw;
+    border-top: 0.15vh solid #000;
+    border-bottom: 0.15vh solid #000;
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+}
+
+#lowerHalf h1{
+    width: 25%;
+    justify-content: flex-start;
+    font-size: 4vh;
+}
+
+#lowerHalf h1::after{
+    position: absolute;
+    content: "©";
+    font-size: 0.7vh;
+    font-family: "gilroy";
+    font-weight: 300;
+    top: 0.9vh;
+    right: 0;
+}
+
+#lowerHalf h1::before{
+    position: absolute;
+    content: "model management";
+    font-size: 0.5vh;
+    font-family: "gilroy",sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.04vw;
+    top:3.8vh; 
+    right: 3%;
+}
+
+#lowerHalf h2{
+    display: none;
+}
+
+
+#lowerHalf h2:nth-last-child(1){
+    position: absolute;
+    font-size: 1.8vh;
+    /* background-color: #c61c1c; */
+    right: 0%;
+    top:0%;
+    height: 65%;
+    width:40%;
+    display: inline-block;
+    padding-left: 2vw;
+}
+
+#contact{
+    /* background:blue; */
+    height: 83%;
+    width: 100%;
+}
+
+#contact i{
+    opacity:70%;
+    scale: 1;
+    color: #000;
+}
+
+#contact i:hover{
+    scale:1.1;
+    opacity: 100%;
+}
+
+#contact h6{
+    font-size: 0.7vh;
+    font-weight: 300;
+}
+
+
+img:hover{
+    scale:1.03;
+    transition: all ease-in-out 0.5s;
+}
+}
